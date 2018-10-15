@@ -1,4 +1,5 @@
 ---
+layout: note
 title: Cannon Smoke
 categories: houdini
 date: 18-10-15

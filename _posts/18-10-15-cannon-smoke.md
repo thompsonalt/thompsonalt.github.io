@@ -4,10 +4,8 @@ title: Cannon Smoke
 categories: houdini
 date: 18-10-15
 ---
-
-# Cannon Smoke
-
 This is the code to produce the velocity field for the smoke. Making the smoke travel a long distance without pluming is crux of the challenge. Having a large velocity field solves this problem to some extent.
+
 ```javascript
 float dist = length(set(@P.x, @P.y, 0));
 float norm_dist = fit(dist, 0.0, chf("max_dist"), 0.0, 1.0);
@@ -26,3 +24,6 @@ float diverge = chramp("diverge", norm_z);
 
 @vel = @vel*remap_dist*z_falloff+noise_scaled;
 ```
+Here is a screenshot of the setup:
+
+![Cannon Vel Screenshot](/assets/images/18-10-15-cannon-source-vel.PNG)

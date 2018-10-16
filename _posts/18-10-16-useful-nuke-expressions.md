@@ -16,3 +16,5 @@ The `[topnode]` is the key word. I use `[file rootname]` in this case just to st
 [Lookin Nuke TCL Snippets](http://www.lookinvfx.com/nuke-tcl-snippets/)
 
 [Adam Teale's Nuke Snippets](http://adamteale.com/some-nuke-python-snippets/)
+
+[Cameron Carson's Wave Expressions](https://www.cameroncarson.com/nuke-wave-expressions/)

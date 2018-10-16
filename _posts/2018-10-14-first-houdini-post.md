@@ -4,7 +4,6 @@ title: First Houdini Post
 date: 2018-10-14 12:29:12 -0700
 categories: 
     houdini
-    nifty
 ---
 
 ## This is my first attempt at a Houdini post

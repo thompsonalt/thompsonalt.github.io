@@ -27,3 +27,5 @@ float diverge = chramp("diverge", norm_z);
 Here is a screenshot of the setup:
 
 ![Cannon Vel Screenshot](/assets/images/18-10-15-cannon-source-vel.PNG)
+
+### [Hip file download](/assets/projects/houdini/18-10-16-cannon-smoke.hip)

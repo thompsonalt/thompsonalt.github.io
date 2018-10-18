@@ -1,6 +1,6 @@
 ---
 layout: note
-title: First Houdini Post
+title: Houdini Vex Reference
 date: 2018-10-14 12:29:12 -0700
 categories: 
     houdini

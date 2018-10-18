@@ -25,6 +25,11 @@ vector  qToE(vector4 q_value){
 }
 ```
 
+### Houdini's orient from vel equation
+```javascript
+@orient = quaternion(dihedral({0,0,1},@v));
+```
+
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
 

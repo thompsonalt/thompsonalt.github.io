@@ -38,3 +38,5 @@ vector  qToE(vector4 q_value){
 [Object packing](https://vimeo.com/190660612)
 
 [Tokuru Orient Vex](http://www.tokeru.com/cgwiki/index.php?title=JoyOfVex17)
+
+[Richard Lord Dops Work](http://richardlord.tumblr.com/page/2)

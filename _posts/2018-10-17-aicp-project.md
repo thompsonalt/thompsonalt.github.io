@@ -16,3 +16,5 @@ Finds the closest position to the surface of the geometry:
 [RBD deintersect](http://www.tokeru.com/cgwiki/index.php?title=HoudiniDops)
 
 [Object packing](https://vimeo.com/190660612)
+
+[Tokuru Orient Vex](http://www.tokeru.com/cgwiki/index.php?title=JoyOfVex17)

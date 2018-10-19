@@ -30,6 +30,31 @@ vector  qToE(vector4 q_value){
 @orient = quaternion(dihedral({0,0,1},@v));
 ```
 
+### [Custom Slerp Formula](https://keithmaggio.wordpress.com/2011/02/15/math-magician-lerp-slerp-and-nlerp/)
+```javascript
+vector custom_slerp(vector start; vector end; float percent) {
+     // Dot product - the cosine of the angle between 2 vectors.
+     float dot = dot(start, end);     
+     // Clamp it to be in the range of Acos()
+     // This may be unnecessary, but floating point
+     // precision can be a fickle mistress.
+     //clamp(dot, -1.0f, 1.0f);
+     // Acos(dot) returns the angle between start and end,
+     // And multiplying that by percent returns the angle between
+     // start and the final result.
+     float theta = acos(dot)*percent;
+     vector RelativeVec = end - start*dot;
+     RelativeVec = normalize(RelativeVec);     // Orthonormal basis
+     // The final result.
+     return ((start*cos(theta)) + (RelativeVec*sin(theta)));
+}
+
+vector vec1 = {0,1,0};
+vector vec2 = {0,0,1};
+
+@N = custom_slerp(vec1, vec2, chf("bias"));
+```
+
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
 

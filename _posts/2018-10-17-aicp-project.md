@@ -60,6 +60,7 @@ I finally have something working. There's still some wiggly values going on, but
 vector4 first_orient = @orient;
 vector4 second_orient = {0,0,0,1};
 
+// Calculate orient from @up and @v
 matrix3 transform = lookat(@v, 0, {0,1,0});
 second_orient = quaternion(transform);
 
@@ -72,6 +73,12 @@ vector4 transition = qmultiply(second_orient, qinvert(first_orient));
 vector angle_axis = qconvert(transition);
 
 @w = angle_axis*chf("strength");
+```
+
+### Easily Rotate a Vector Around an Axis
+```javascript
+matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
+@N = @N*rot;
 ```
 
 ### Links

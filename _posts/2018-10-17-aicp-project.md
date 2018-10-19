@@ -65,3 +65,5 @@ vector vec2 = {0,0,1};
 [Tokuru Orient Vex](http://www.tokeru.com/cgwiki/index.php?title=JoyOfVex17)
 
 [Richard Lord Dops Work](http://richardlord.tumblr.com/page/2)
+
+[Good stuff about orient](https://www.sidefx.com/forum/topic/53253/)

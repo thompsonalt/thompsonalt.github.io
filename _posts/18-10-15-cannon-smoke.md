@@ -29,3 +29,6 @@ Here is a screenshot of the setup:
 ![Cannon Vel Screenshot](/assets/images/18-10-15-cannon-source-vel.PNG)
 
 ### [Hip file download](/assets/projects/houdini/18-10-16-cannon-smoke.hip)
+
+### Links
+[Jeff Wagner's tips on preventing mushrooming](https://forums.odforce.net/topic/18397-get-rid-of-mushroom-effect-in-explosion-and-add-details-in-the-opening/)

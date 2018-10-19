@@ -54,6 +54,25 @@ vector vec2 = {0,0,1};
 
 @N = custom_slerp(vec1, vec2, chf("bias"));
 ```
+### Working @w Based POP Wrangle (needs refining)
+I finally have something working. There's still some wiggly values going on, but I think it will just take some refining.
+```javascript
+vector4 first_orient = @orient;
+vector4 second_orient = {0,0,0,1};
+
+matrix3 transform = lookat(@v, 0, {0,1,0});
+second_orient = quaternion(transform);
+
+// Get the difference between the two quaternions
+// https://stackoverflow.com/questions/1755631/difference-between-two-quaternions
+vector4 transition = qmultiply(second_orient, qinvert(first_orient));
+
+// Convert to Angle-Axis
+// http://www.tokeru.com/cgwiki/index.php?title=JoyOfVex17#Convert_back_to_matrix
+vector angle_axis = qconvert(transition);
+
+@w = angle_axis*chf("strength");
+```
 
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)

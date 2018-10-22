@@ -6,6 +6,7 @@ date: 18-10-19
 ---
 Aces doesn't have a built in way to convert gamma 1.8, so we have to use a work around in Nuke. This is helpful for bringing Mov elements into a Aces comp.
 
+{% raw %}
 ```
 set cut_paste_input [stack 0]
 version 11.1 v4
@@ -44,6 +45,7 @@ xpos -94
 ypos 3120
 }
 ```
+{% endraw %}
 
 - Read in the Mov as raw
 - Convert from Gamma1.8 to Linear with a colorspace node

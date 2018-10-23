@@ -81,6 +81,15 @@ matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 @N = @N*rot;
 ```
 
+### [Great guide on using xyzdist and primuv together](http://www.toadstorm.com/blog/?p=465)
+```javascript
+int posprim;
+vector param_uv;
+float maxdist = 10;
+float dist = xyzdist(0,@P,posprim,param_uv,maxdist);
+vector goal_pos = primuv(0,"P",posprim,param_uv);
+```
+
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
 

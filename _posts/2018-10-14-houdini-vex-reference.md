@@ -6,7 +6,7 @@ categories:
     houdini
 ---
 
-### Defining attributes
+## [Declaring attributes](http://www.sidefx.com/docs/houdini/vex/snippets.html#declare)
 ```javascript
 f@name //float
 u@name //vector2 (2 floats)
@@ -19,7 +19,14 @@ i@name //int
 s@name //string
 ```
 
+You can also define them like this:
+```javascript
+float @mass = 1;
+vector @up = {0, 1, 0};
+```
+
 ### Arrays
 ```javascript
-i[]name = neighbours(0, @ptnum);
+int nbors[] = neighbours(0, @ptnum);
+i[]@connected_pts = neighbours(0, @ptnum);
 ```

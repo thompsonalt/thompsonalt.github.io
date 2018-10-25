@@ -30,3 +30,11 @@ vector @up = {0, 1, 0};
 int nbors[] = neighbours(0, @ptnum);
 i[]@connected_pts = neighbours(0, @ptnum);
 ```
+
+### [Set Attribute as a Vector that Houdini Should Transform](https://www.sidefx.com/forum/topic/41722/?page=1#post-187303)
+By default, when you declare a vector attribute in Houdini it doesn't know if it should transform it with the rest of the geo or not. Some attributes, like `@orient`, `@v`, and `@N`, Houdini automatically knows to transform. If you create your own attribute, you'll have to set the type info explicitly. I'm curious if that attribute type info is visible somewhere.
+```javascript
+v@attribute1 = 1;
+setattribtypeinfo(0, “point”, “attribute1”, “vector”);
+addvariablename(0, “attribute1”, “ATTRIBUTE1”);
+```

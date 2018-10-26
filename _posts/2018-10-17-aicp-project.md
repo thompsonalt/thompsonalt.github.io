@@ -102,3 +102,7 @@ vector goal_pos = primuv(0,"P",posprim,param_uv);
 [Richard Lord Dops Work](http://richardlord.tumblr.com/page/2)
 
 [Good stuff about orient](https://www.sidefx.com/forum/topic/53253/)
+
+[Centering the Pivot](https://forums.odforce.net/topic/29350-custom-pivot-location-on-packed-primitives/)
+
+[Tokuru Grain Ropes](http://www.tokeru.com/cgwiki/index.php?title=HoudiniDops#Grain_solver_for_hair)

@@ -81,11 +81,22 @@ matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 @N = @N*rot;
 ```
 
+<<<<<<< HEAD
 ### [This sounds very similar to the problem I'm having](https://stackoverflow.com/questions/2886606/flipping-issue-when-interpolating-rotations-using-quaternions)
 >Remember, each rotation can actually be represented by two quaternions, q and -q. But the Slerp path from q to w will be different from the path from (-q) to w: one will go the long away around, the other the short away around. It sounds like you're getting the long way when you want the short way.
 >
 >Try taking the dot product of your two quaternions (i.e., the 4-D dot product), and if the dot product is negative, replace your quaterions q1 and q2 with -q1 and q2 before performing Slerp.
 
+=======
+### [Great guide on using xyzdist and primuv together](http://www.toadstorm.com/blog/?p=465)
+```javascript
+int posprim;
+vector param_uv;
+float maxdist = 10;
+float dist = xyzdist(0,@P,posprim,param_uv,maxdist);
+vector goal_pos = primuv(0,"P",posprim,param_uv);
+```
+>>>>>>> 8f3745d48081e32da5a9a9abc19f407aeb1a62c4
 
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
@@ -99,3 +110,7 @@ matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 [Richard Lord Dops Work](http://richardlord.tumblr.com/page/2)
 
 [Good stuff about orient](https://www.sidefx.com/forum/topic/53253/)
+
+[Centering the Pivot](https://forums.odforce.net/topic/29350-custom-pivot-location-on-packed-primitives/)
+
+[Tokuru Grain Ropes](http://www.tokeru.com/cgwiki/index.php?title=HoudiniDops#Grain_solver_for_hair)

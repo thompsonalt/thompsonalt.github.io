@@ -81,6 +81,12 @@ matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 @N = @N*rot;
 ```
 
+### [This sounds very similar to the problem I'm having](https://stackoverflow.com/questions/2886606/flipping-issue-when-interpolating-rotations-using-quaternions)
+>Remember, each rotation can actually be represented by two quaternions, q and -q. But the Slerp path from q to w will be different from the path from (-q) to w: one will go the long away around, the other the short away around. It sounds like you're getting the long way when you want the short way.
+>
+>Try taking the dot product of your two quaternions (i.e., the 4-D dot product), and if the dot product is negative, replace your quaterions q1 and q2 with -q1 and q2 before performing Slerp.
+
+
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
 

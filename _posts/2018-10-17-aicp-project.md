@@ -111,8 +111,8 @@ The most challenging aspect of this project was finding a way to instance Maya o
 - Remove the Houdini Engine object from the scene before rendering.
 
 Confusing and many gotchas, but in the end it was pretty stable. Here are some files for reference:
-- [Example Maya File](./assets/projects/maya/18-11-16-example-maya-instancer.ma)
-- [Example HDA](./assets/projects/houdini/18-11-16-example-hda.hda)
+- [Example Maya File](/assets/projects/maya/18-11-16-example-maya-instancer.ma)
+- [Example HDA](/assets/projects/houdini/18-11-16-example-hda.hda)
 
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
@@ -132,4 +132,4 @@ Confusing and many gotchas, but in the end it was pretty stable. Here are some f
 [Tokuru Grain Ropes](http://www.tokeru.com/cgwiki/index.php?title=HoudiniDops#Grain_solver_for_hair)
 
 
-### [Download Sample Hip](./assets/projects/houdini/18-11-16-AICP-project.hip)
+### [Download Sample Hip](/assets/projects/houdini/18-11-16-AICP-project.hip)

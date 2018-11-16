@@ -95,6 +95,25 @@ float dist = xyzdist(0,@P,posprim,param_uv,maxdist);
 vector goal_pos = primuv(0,"P",posprim,param_uv);
 ```
 
+### Instancing from Houdini to Maya
+The most challenging aspect of this project was finding a way to instance Maya objects using the Houdini Engine, but remove Houdini Engine from the files sent to the farm. This was in order to save money on Houdini licenses.
+
+#### Steps:
+- Create low resolution geometry for Houdini and make sure the object is centered in world space in Houdini and Maya.
+- Sim that geometry in Houdini. Make sure to disable `Compute Center of Mass` in the rigid body packed object. Also, when fetching out of the DOP network, make sure to `Fetch Geometry from DOP Network` instead of fetching packed geometry. Also, preserve an attribute that describes which object that point refers to for Maya.
+- Write those points to disk as bgeo files
+- Create an HDA that converts the orient attribute on those points to euler rotation values for Maya.
+- After importing that HDA into Maya, use `nCache>Create New Cache` to cache those points.
+- In Maya, create an nParticleSystem and geoInstancer with the Maya objects layed down in the same order as the attribute out of Houdini.
+    - Add the rotation, scale and object id attributes using `Modify>Add Attribute`
+    - Choose the correct data type and "Per particle" as the Attribute type.
+- Attach that newly created cache to the nParticle system you created.
+- Remove the Houdini Engine object from the scene before rendering.
+
+Confusing and many gotchas, but in the end it was pretty stable. Here are some files for reference:
+- [Example Maya File](./assets/projects/maya/18-11-16-example-maya-instancer.ma)
+- [Example HDA](./assets/projects/houdini/18-11-16-example-hda.hda)
+
 ### Links
 [Copying and Instancing Point Attributes](http://www.sidefx.com/docs/houdini/copy/instanceattrs.html)
 
@@ -111,3 +130,6 @@ vector goal_pos = primuv(0,"P",posprim,param_uv);
 [Centering the Pivot](https://forums.odforce.net/topic/29350-custom-pivot-location-on-packed-primitives/)
 
 [Tokuru Grain Ropes](http://www.tokeru.com/cgwiki/index.php?title=HoudiniDops#Grain_solver_for_hair)
+
+
+### [Download Sample Hip](./assets/projects/houdini/18-11-16-AICP-project.hip)

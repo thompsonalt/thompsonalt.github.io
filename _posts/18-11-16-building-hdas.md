@@ -12,3 +12,9 @@ To press a button deeper in the HDA use the following:
 hou.parm("./deadline_submit1/submit").pressButton()
 ```
 [Nick Pfeiffer explains this well.](http://nicholaspfeiffer.com/blog/2016/2/20/houdini-tip-of-the-day-python-pressbutton-and-set-commands)
+
+If you have a function in the asset's python module you'd like to access, use the following:
+```javascript
+hou.node(".").hdaModule().render_callback()
+```
+[Link to Side Effects help](http://www.sidefx.com/docs/houdini/hom/hou/HDAModule.html)

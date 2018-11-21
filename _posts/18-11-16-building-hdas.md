@@ -5,7 +5,7 @@ categories: houdini
 date: 2018-11-16
 ---
 
-To get the current node use `hou.node('.')`
+To get the current node use `hou.node('.')` or `hou.pwd()`
 
 To press a button deeper in the HDA use the following:
 ```javascript
@@ -15,6 +15,13 @@ hou.parm("./deadline_submit1/submit").pressButton()
 
 If you have a function in the asset's python module you'd like to access, use the following:
 ```javascript
-hou.node(".").hdaModule().render_callback()
+hou.node(".").hdaModule().random_function()
+# or...
+hou.pwd().hm().random_function()
 ```
+To get current node in a callback:
+```javascript
+kwargs.get("node")
+```
+
 [Link to Side Effects help](http://www.sidefx.com/docs/houdini/hom/hou/HDAModule.html)

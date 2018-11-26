@@ -25,3 +25,16 @@ kwargs.get("node")
 ```
 
 [Link to Side Effects help](http://www.sidefx.com/docs/houdini/hom/hou/HDAModule.html)
+
+### [Add Parameter to Existing Folder](https://www.sidefx.com/forum/topic/20361/?page=1#post-95571)
+
+```python
+n = hou.node('/out/renderNode3')
+parm_group = n.parmTemplateGroup()
+target_folder = parm_group.findFolder((“Passes”,))
+hou_parm_template2 = …
+hou_parm_template3 = …
+target_folder.addParmTemplate(hou_parm_template2)
+target_folder.addParmTemplate(hou_parm_template3)
+n.setParmTemplateGroup(parm_group)
+```

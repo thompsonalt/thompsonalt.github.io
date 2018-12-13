@@ -5,9 +5,8 @@ categories: houdini
 date: 18-12-07
 ---
 
-<video width="700" controls>
+<video width="700" loop>
   <source src="/assets/images/18-12-13-melting.mp4" type="video/mp4">
-Your browser does not support the video tag.
 </video>
 
 ### [Download Hip File](/assets/projects/18-12-13-melting.hip)

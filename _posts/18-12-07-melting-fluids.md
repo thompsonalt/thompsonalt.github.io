@@ -1,34 +1,20 @@
 ---
 layout: note
-title: Cannon Smoke
+title: Melting Fluids
 categories: houdini
-date: 18-10-15
+date: 18-12-07
 ---
-This is the code to produce the velocity field for the smoke. Making the smoke travel a long distance without pluming is crux of the challenge. Having a large velocity field solves this problem to some extent.
 
-```javascript
-float dist = length(set(@P.x, @P.y, 0));
-float norm_dist = fit(dist, 0.0, chf("max_dist"), 0.0, 1.0);
-float remap_dist = chramp("remap_dist", norm_dist);
-float z_max = chf("z_max");
-float norm_z = fit(@P.z, z_max, 0, 0, 1);
-float z_falloff = chramp("z_remap", norm_z);
-float noise_falloff = chramp("noise_falloff", norm_z);
+<video width="700" controls>
+  <source src="/assets/images/18-12-13-melting.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
-vector noise = curlnoise(@P*chf("noise_scale"))*chf("noise_amp");
-vector noise_scaled = noise*noise_falloff;
-
-vector towards_center = normalize(set(@P.x, @P.y, 0));
-float diverge = chramp("diverge", norm_z);
-@vel = lerp(@vel, towards_center, diverge);
-
-@vel = @vel*remap_dist*z_falloff+noise_scaled;
-```
-Here is a screenshot of the setup:
-
-![Cannon Vel Screenshot](/assets/images/18-10-15-cannon-source-vel.PNG)
-
-### [Hip file download](/assets/projects/houdini/18-10-16-cannon-smoke.hip)
+### [Download Hip File](/assets/projects/18-12-13-melting.hip)
 
 ### Links
-[Jeff Wagner's tips on preventing mushrooming](https://forums.odforce.net/topic/18397-get-rid-of-mushroom-effect-in-explosion-and-add-details-in-the-opening/)
+[BW Design Fallen Angel Tutorial](https://vimeo.com/122217238)
+
+[Side Effects Forum on Stickiness independent from Viscosity](https://www.sidefx.com/forum/topic/31205/)
+
+[Jeff Wagner on colliders](https://vimeo.com/254343083)

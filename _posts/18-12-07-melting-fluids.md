@@ -5,7 +5,7 @@ categories: houdini
 date: 18-12-07
 ---
 
-<video width="700" loop>
+<video width="700" loop autoplay>
   <source src="/assets/images/18-12-13-melting.mp4" type="video/mp4">
 </video>
 

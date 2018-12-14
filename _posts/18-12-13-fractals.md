@@ -48,7 +48,7 @@ This was a great usecase for Houdini's parallel processing compiled blocks. Even
 
 ![As Geo](/assets/images/18-12-13-fractals-geo.gif) ![Node Graph](/assets/images/18-12-13-fractals_geo_nodes.png)
 
-### [Download hip file](/assets/projects/18-12-13-fractals.hip)
+### [Download hip file](/assets/projects/houdini/18-12-13-fractals.hip)
 
 ### Links
 [Coding challenge for building a menger sponge](https://www.youtube.com/watch?v=LG8ZK-rRkXo)

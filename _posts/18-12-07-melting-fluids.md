@@ -9,7 +9,7 @@ date: 18-12-07
   <source src="/assets/images/18-12-13-melting.mp4" type="video/mp4">
 </video>
 
-### [Download Hip File](/assets/projects/18-12-13-melting.hip)
+### [Download Hip File](/assets/projects/houdini/18-12-13-melting.hip)
 
 ### Links
 [BW Design Fallen Angel Tutorial](https://vimeo.com/122217238)

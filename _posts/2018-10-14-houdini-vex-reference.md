@@ -55,3 +55,6 @@ for (int i = 0; i < len(primattribs); i++) {
     setprimgroup(0, primattribs[i], @primnum, prim(0, primattribs[i], @primnum), "set");
 }
 ```
+
+## Links
+[VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)

@@ -44,3 +44,14 @@ v@attribute1 = 1;
 setattribtypeinfo(0, “point”, “attribute1”, “vector”);
 addvariablename(0, “attribute1”, “ATTRIBUTE1”);
 ```
+
+### Create Groups from Attributes
+This is of limited usefulness. `detailintrinsic` is a handy way to get a list of all the primitive attributes. See more on that [here](https://www.sidefx.com/forum/topic/31699/).
+
+```javascript
+string primattribs[] = detailintrinsic(0,"primitiveattributes");
+
+for (int i = 0; i < len(primattribs); i++) {
+    setprimgroup(0, primattribs[i], @primnum, prim(0, primattribs[i], @primnum), "set");
+}
+```

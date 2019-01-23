@@ -16,6 +16,8 @@ This is an annoying one... It turns out, if you download an FBX from [Mixamo](ht
 - Grab the arrows in the center of the red selection area and drag one frame to the right.
 - Re-export the FBX with `[File > Export All]`
 
+[Example Hip Download](/assets/projects/houdini/19-01-23-crowds-example.hip)
+
 ## Links
 
 [Short and Sweet 3D video on foot locking and basics](https://www.youtube.com/watch?v=CIgTqZBtMwY)

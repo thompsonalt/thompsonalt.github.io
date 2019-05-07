@@ -1,6 +1,6 @@
 ---
 layout: note
-title: Working With UVs
+title: Smoke Trails
 date: 2019-04-26
 categories: 
     houdini

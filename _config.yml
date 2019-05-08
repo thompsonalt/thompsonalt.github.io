@@ -1,6 +1,7 @@
 repository: thompsonalt/thompsonalt.github.io
-title: Notes
+title: adamt.tv
 author: Adam Thompson
+description: VFX Artist / Tool Developer
 
 # Build settings
 markdown: kramdown

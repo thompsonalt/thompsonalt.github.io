@@ -1,8 +1,8 @@
 ---
 title: Aicp Project
-published: true
+layout: note
 categories: houdini
-date: 2018-10-17
+date: 18-10-17
 ---
 
 Finds the closest position to the surface of the geometry:

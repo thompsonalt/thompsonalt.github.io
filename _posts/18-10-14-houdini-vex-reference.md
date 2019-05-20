@@ -1,9 +1,8 @@
 ---
-layout: note
 title: Houdini Vex Reference
-date: 2018-10-14 12:29:12 -0700
-categories: 
-    houdini
+layout: note
+date: 18-10-14
+categories: houdini
 ---
 
 ## [Declaring attributes](http://www.sidefx.com/docs/houdini/vex/snippets.html#declare)

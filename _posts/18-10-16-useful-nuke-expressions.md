@@ -1,6 +1,7 @@
 ---
 title: Useful Nuke Expressions
 layout: note
+date: 18-10-16
 categories: nuke
 ---
 

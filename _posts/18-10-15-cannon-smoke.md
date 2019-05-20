@@ -1,8 +1,8 @@
 ---
-layout: note
 title: Cannon Smoke
-categories: houdini
+layout: note
 date: 18-10-15
+categories: houdini
 ---
 This is the code to produce the velocity field for the smoke. Making the smoke travel a long distance without pluming is crux of the challenge. Having a large velocity field solves this problem to some extent.
 

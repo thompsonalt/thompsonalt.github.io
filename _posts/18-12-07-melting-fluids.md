@@ -1,8 +1,8 @@
 ---
-layout: note
 title: Melting Fluids
-categories: houdini
+layout: note
 date: 18-12-07
+categories: houdini
 ---
 
 <video width="700" loop autoplay>

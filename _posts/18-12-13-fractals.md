@@ -1,8 +1,8 @@
 ---
-layout: note
 title: Fractals
-categories: houdini
+layout: note
 date: 18-12-13
+categories: houdini
 ---
 
 As a personal challenge I set out to implement the menger sponge in Houdini. To make things a little trickier I decided to try for a volume implementation and a geometry implementation.

@@ -1,6 +1,6 @@
 ---
-layout: note
 title: Mov Gamma 1.8 to Aces Workflow
+layout: note
 categories: nuke
 date: 18-10-19
 ---

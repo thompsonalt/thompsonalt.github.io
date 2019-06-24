@@ -25,3 +25,9 @@ grub.cfg lives in a different place depending on if you're on a bios system or a
     grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
     ```
 > **NOTE**: Notice how 'centos' is defined instead of 'redhat'
+
+To load the last selected grub entry, make sure these lines are in your grub file: `/etc/default/grub`
+```
+GRUB_DEFAULT="saved"
+GRUB_SAVEDEFAULT="true
+```

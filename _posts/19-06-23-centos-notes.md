@@ -22,5 +22,6 @@ grub.cfg lives in a different place depending on if you're on a bios system or a
     ```
 - On UEFI-based machines, issue the following command as root:
     ```
-    grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+    grub2-mkconfig -o /boot/efi/EFI/centos/grub.cfg
     ```
+> **NOTE**: Notice how 'centos' is defined instead of 'redhat'

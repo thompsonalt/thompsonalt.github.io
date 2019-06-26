@@ -59,6 +59,10 @@ for (int i = 0; i < len(primattribs); i++) {
 ```javascript
 i@rand_mag =  rand(@ptnum)< 0.5 ? -1 : 1;
 ```
+Or even easier:
+```javascript
+sign(rand(@ptnum)-0.5);
+```
 
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)

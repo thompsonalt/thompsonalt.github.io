@@ -43,4 +43,7 @@ conda init powershell
 See [here](https://stackoverflow.com/questions/47800794/how-to-activate-different-anaconda-environment-from-powershell).
 
 
-The first time you run your scripts you'll always still get that error. VS code then does `conda activate myenv` and fixes it for the next time you run it. You could avoid this by manually putting that in the terminal before running.
+The first time you run your scripts you'll always still get that error. VS code then does `conda activate myenv` and fixes it for the next time you run it.
+
+Another useful link for setting up vscode with anaconda: [How to Activate Conda Environment in VS Code](https://medium.com/@udiyosovzon/how-to-activate-conda-environment-in-vs-code-ce599497f20d)
+

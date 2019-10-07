@@ -64,5 +64,47 @@ Or even easier:
 sign(rand(@ptnum)-0.5);
 ```
 
+### Extract transform from Alembic
+From this help page on [`packedtransform()`](https://www.sidefx.com/docs/houdini/vex/functions/packedtransform.html).
+[Hip download.](/assets/projects/houdini/19-10-07-alembic-transform.zip)
+
+Negate and store transform:
+```javascript
+// get transform from alembic
+matrix full_transform = primintrinsic(0, "packedfulltransform", 0);
+4@disabled_transform = full_transform;
+
+// invert that transform
+matrix invert_full_transform = invert(full_transform);
+matrix transform = invert_full_transform;
+
+// get current packed transform
+matrix3 primtf = primintrinsic(0, "transform", @primnum);
+setprimintrinsic(0, "transform", @primnum, primtf * (matrix3)transform);
+
+// set position
+int primpoint = primpoint(0, @primnum, 0);
+vector pos = point(0, "P", @ptnum);
+setpointattrib(0, "P", @ptnum, pos * transform);
+```
+
+Apply transform to arbitrary geo:
+```javascript
+matrix transform = prim(1, "disabled_transform", 0);
+
+// get current packed transform
+setprimintrinsic(0, "transform", @primnum, (matrix3)transform);
+
+// set position
+int primpoints[] = primpoints(0, @primnum);
+for (int i = 0; i < len(primpoints); i ++){
+    int point_num = primpoints[i];
+    vector pos = point(0, "P", point_num);
+    setpointattrib(0, "P", point_num, pos * transform);
+}
+```
+
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
+

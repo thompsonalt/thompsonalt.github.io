@@ -19,3 +19,5 @@ The `[topnode]` is the key word. I use `[file rootname]` in this case just to st
 [Adam Teale's Nuke Snippets](http://adamteale.com/some-nuke-python-snippets/)
 
 [Cameron Carson's Wave Expressions](https://www.cameroncarson.com/nuke-wave-expressions/)
+
+[Gatimedia Expressions and TCL Snippets (Extensive)](https://www.gatimedia.co.uk/expressions)

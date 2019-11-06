@@ -47,3 +47,16 @@ The first time you run your scripts you'll always still get that error. VS code 
 
 Another useful link for setting up vscode with anaconda: [How to Activate Conda Environment in VS Code](https://medium.com/@udiyosovzon/how-to-activate-conda-environment-in-vs-code-ce599497f20d)
 
+
+## Pip Reference
+
+To install a python package to a specific location use ```--target```. ([Source](https://stackoverflow.com/questions/2915471/install-a-python-package-into-a-different-directory-using-pip))
+
+```
+pip install --target=d:\somewhere\other\than\the\default package_name
+```
+
+To force upgrade a package use ```--upgrade```
+```
+pip install Django --upgrade
+```

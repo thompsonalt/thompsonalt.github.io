@@ -48,6 +48,13 @@ The first time you run your scripts you'll always still get that error. VS code 
 Another useful link for setting up vscode with anaconda: [How to Activate Conda Environment in VS Code](https://medium.com/@udiyosovzon/how-to-activate-conda-environment-in-vs-code-ce599497f20d)
 
 
+To install the version of PySide shipped with Nuke 11, Houdini 16.5, and Maya 2018 (PySide2 2.0.0~alpha0)(Python2.7) use the following Conda commands.
+
+```
+conda config --add channels conda-forge
+conda install PySide2=2.0
+```
+
 ## Pip Reference
 
 To install a python package to a specific location use ```--target```. ([Source](https://stackoverflow.com/questions/2915471/install-a-python-package-into-a-different-directory-using-pip))

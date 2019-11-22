@@ -5,7 +5,8 @@ date: 19-11-22
 categories: houdini
 ---
 
-To calculate the horizontal and verticle FOV for Houdini's cameras:
+To calculate the horizontal and vertical FOV for Houdini's cameras:
+
 Horizontal:
 ```
 2*atan(ch("aperture")/(2*ch("focal")))

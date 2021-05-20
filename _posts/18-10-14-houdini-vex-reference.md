@@ -104,6 +104,38 @@ for (int i = 0; i < len(primpoints); i ++){
 }
 ```
 
+## Find Weighted Average of Near Points Attribute
+
+```
+// Compute color of voxel based on distance weighted
+// average Cd of particles within radius of .05
+
+int near_points[] = nearpoints(1, @P, .05);
+
+// Find distances to all near points
+float dists[];
+foreach(int i; int pt; near_points) {
+    dists[i] = distance(@P, point(1, "P", pt));
+}
+
+// Normalize by maximum distance
+float max = max(dists);
+float norm_dists[];
+foreach (int i; float dist; dists) {
+    norm_dists[i] = max/dist;
+}
+
+// Find weighted average Cd (value)
+float total_normalized = sum(norm_dists);
+vector value = set(0,0,0);
+foreach (int i; float norm_dist; norm_dists) {
+    float ratio = norm_dist / total_normalized;
+    value += point(1, "Cd", near_points[i]);
+}
+value = value / total_normalized;
+
+v@Cd = value;
+```
 
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)

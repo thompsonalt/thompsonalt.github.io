@@ -13,5 +13,5 @@ description = sys.argv[1]
 im_location = 'assets/images/{}-{}.png'.format(cur_date, description)
 im.save(im_location, 'PNG')
 
-markdown = '![{}]({})'.format(description, im_location)
+markdown = '![{}](/{})'.format(description, im_location)
 pyperclip.copy(markdown)

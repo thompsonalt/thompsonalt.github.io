@@ -8,7 +8,8 @@ categories: houdini
 
 `$HFS/houdini/vex/include/math.h`
 
-```// Defines for the maketransform() VEX function.  The function takes two
+```
+// Defines for the maketransform() VEX function.  The function takes two
 // integer arguments which determine the order that the transform gets made.
 #define XFORM_SRT	0	// Scale, Rotate, Translate
 #define XFORM_STR	1	// Scale, Translate, Rotate

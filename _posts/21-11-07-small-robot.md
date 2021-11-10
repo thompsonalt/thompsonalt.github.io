@@ -1,7 +1,7 @@
 ---
 title: Small Robot Notes
 layout: note
-categories: Electronics
+categories: electronics
 ---
 
 ## Motors

@@ -48,21 +48,21 @@ categories: houdini
 **Note**: This has been modifed from the original file for brevity
 
 ```
-#define M_E		    2.7182818
+#define M_E		2.7182818
 #define LN10		2.3025850
-#define LN2		    0.6931471
-#define LOG10E	    0.4342944
+#define LN2		0.6931471
+#define LOG10E		0.4342944
 #define LOG2E		1.4426950
-#define PI		    3.1415926
-#define M_TWO_PI    6.2831852
+#define PI		3.1415926
+#define M_TWO_PI	6.2831852
 #define PI_2		1.5707963
 #define PI_4		0.7853981
-#define SQRT1_2	    0.7071067
+#define SQRT1_2		0.7071067
 #define SQRT2		1.4142135
 #define TOLERANCE	0.0001
 
-#define M_2SQRT6_3  1.6329931618554518  // 2 * sqrt(6) / 3
-#define M_SQRT3     1.7320508075688772  // sqrt(3)
-#define M_1_SQRT3   0.5773502691896257  // 1 / sqrt(3)
-#define M_SQRT_2_3  0.816496580927726   // sqrt(2 / 3)
+#define M_2SQRT6_3	1.6329931618554518	// 2 * sqrt(6) / 3
+#define M_SQRT3		1.7320508075688772	// sqrt(3)
+#define M_1_SQRT3	0.5773502691896257	// 1 / sqrt(3)
+#define M_SQRT_2_3	0.816496580927726	// sqrt(2 / 3)
 ```

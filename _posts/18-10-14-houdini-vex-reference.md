@@ -137,6 +137,23 @@ value = value / total_normalized;
 v@Cd = value;
 ```
 
+## Modify cracked transform
+
+This stumped me for a while. In order to crack the transform and feed those transform values back into a maketransform, you need to use `XFORM_SRT` instead of `XFORM_TRS` for the order of the transform.
+
+```
+matrix3 xform = primintrinsic(0, "transform", @primnum);
+
+vector translate, rotate, scale;
+
+cracktransform(XFORM_SRT, XFORM_XYZ, @P, xform, translate, rotate, scale);
+
+matrix3 new_xform = (matrix3)maketransform(XFORM_SRT, XFORM_XYZ, translate, rotate, scale);
+
+3@old_xform = xform;
+3@new_xform = new_xform;
+```
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

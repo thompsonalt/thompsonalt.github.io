@@ -10,10 +10,11 @@ categories: electronics
 
 [**N20**](https://www.adafruit.com/product/4638)
 
+[Pololu Micro Metal Gearmotors](https://www.pololu.com/category/60/micro-metal-gearmotors) |
 [Bringsmart N20 Micro motor](https://www.aliexpress.com/item/32910935772.html) | 
 [DC N20 Mini Micro Metal Gear Motor](https://www.aliexpress.com/item/32991622456.html) | 
 [uxcell DC 3V 0.2A 100RPM Gear Box Geared Motor](https://www.amazon.com/uxcell-100RPM-Geared-Motor-Project/dp/B0080DNBPK/) |
-[uxcell 300RPM 6V 0.45A](https://www.amazon.com/gp/product/B0080DOEQU/)
+[uxcell 300RPM 6V 0.45A](https://www.amazon.com/gp/product/B0080DOEQU/) 
 
 ![](/assets/images/21-11-07-n20-motor.png)
 
@@ -31,6 +32,8 @@ categories: electronics
 
 
 ### Universal Mounting Hubs
+
+[Pololu Universal Mounting Hubs](https://www.pololu.com/category/137/pololu-universal-mounting-hubs)
 
 To attach something to the shaft of a motor, you can use a universal mounting hub of the correct diameter. 
 
@@ -55,6 +58,7 @@ Another bonus for this board is that Adafruit makes a [backpack](https://www.ada
 
 ### Motor Controllers / Motor Drivers
 
+[DRV8833 Dual Motor Driver Carrier](https://www.pololu.com/product/2130)
 
 ## Batteries
 
@@ -71,6 +75,8 @@ Hopefully charging can be integrated into the design of the robot. It will be he
 [Adafruit Micro Lipo - USB LiIon/LiPoly charger - v1](https://www.adafruit.com/product/1304)
 
 [USB LiIon/LiPoly charger - v1.2](https://www.adafruit.com/product/259)
+
+[iMAX B6AC V2 Balance Charger and Discharger](https://www.pololu.com/product/2588)
 
 
 ### Wire Connectors 

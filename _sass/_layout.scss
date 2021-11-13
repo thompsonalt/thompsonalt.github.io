@@ -187,12 +187,11 @@
     font-size: 24px;
 }
 
-.category-box {
-    min-width: -webkit-calc((#{$content-width} - (#{$spacing-unit} * 4))/2);
-    min-width: calc((#{$content-width} - (#{$spacing-unit} * 4))/2);
-    // width: 50%;
-    float: left;
-}
+// .category-box {
+//     min-width: -webkit-calc((#{$content-width} - (#{$spacing-unit} * 4))/2);
+//     min-width: calc((#{$content-width} - (#{$spacing-unit} * 4))/2);
+//     float: left;
+// }
 
 
 /**

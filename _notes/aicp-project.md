@@ -1,7 +1,6 @@
 ---
 title: Aicp Project
-layout: note
-categories: houdini
+category: houdini
 date: 18-10-17
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: FFMpeg
-layout: note
-categories: command-line
+date: 21-10-21
+category: command-line
 ---
 
 ## Video to image sequence

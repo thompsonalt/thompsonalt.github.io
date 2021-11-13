@@ -1,8 +1,7 @@
 ---
 title: Digital Lines
-layout: note
 date: 19-06-26
-categories: houdini
+category: houdini
 ---
 
 There are probably better ways to do this, but these are the two ways I came up with under a time crunch. Possibly useful to look at in the future. Would take further development to make them more useful.

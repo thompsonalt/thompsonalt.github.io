@@ -1,8 +1,7 @@
 ---
 title: Grub
-layout: note
 date: 19-06-23
-categories: linux
+category: linux
 ---
 
 # Changing Grub's Default

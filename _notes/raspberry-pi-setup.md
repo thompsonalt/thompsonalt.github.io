@@ -1,7 +1,7 @@
 ---
 title: Raspberry Pi Headless Setup
-layout: note
-categories: electronics
+category: electronics
+date: 21-11-10
 ---
 
 1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/), and follow the simple steps to install the OS.

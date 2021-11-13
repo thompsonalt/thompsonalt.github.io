@@ -1,8 +1,7 @@
 ---
 title: Houdini Cameras
-layout: note
 date: 19-11-22
-categories: houdini
+category: houdini
 ---
 
 To calculate the horizontal and vertical FOV for Houdini's cameras:

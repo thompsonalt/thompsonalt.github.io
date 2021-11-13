@@ -1,8 +1,7 @@
 ---
 title: Houdini Constraints
-layout: note
 date: 19-12-17
-categories: houdini
+category: houdini
 ---
 
 ## Gyroscope Example

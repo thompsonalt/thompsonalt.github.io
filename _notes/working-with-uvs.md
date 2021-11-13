@@ -1,8 +1,7 @@
 ---
 title: Working With UVs
-layout: note
 date: 19-01-23
-categories: houdini
+category: houdini
 ---
 
 ### Preserving UVs After Remeshing

@@ -1,8 +1,7 @@
 ---
 title: Useful Nuke Expressions
-layout: note
 date: 18-10-16
-categories: nuke
+category: nuke
 ---
 
 ### Set a write node based on the read node at the top of the pipe

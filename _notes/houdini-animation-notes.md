@@ -1,8 +1,7 @@
 ---
 title: Houdini Animation Notes
-layout: note
 date: 21-06-06
-categories: houdini
+category: houdini
 ---
 
 ## Extrapolation

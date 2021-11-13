@@ -1,8 +1,7 @@
 ---
 title: Smoke Trails
-layout: note
 date: 19-04-26
-categories: houdini
+category: houdini
 ---
 
 ### Distributed Simulation

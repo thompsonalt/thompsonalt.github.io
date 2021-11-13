@@ -1,8 +1,7 @@
 ---
 title: Building HDAs
-layout: note
 date: 18-11-16
-categories: houdini
+category: houdini
 ---
 
 To get the current node use `hou.node('.')` or `hou.pwd()`

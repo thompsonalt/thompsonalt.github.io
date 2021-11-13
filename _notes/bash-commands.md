@@ -1,7 +1,6 @@
 ---
 title: Bash Commands
-layout: note
-categories: linux
+category: linux
 ---
 
 ## Make File Executable

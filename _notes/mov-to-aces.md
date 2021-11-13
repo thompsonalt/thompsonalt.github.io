@@ -1,7 +1,6 @@
 ---
 title: Mov Gamma 1.8 to Aces Workflow
-layout: note
-categories: nuke
+category: nuke
 date: 18-10-19
 ---
 Aces doesn't have a built in way to convert gamma 1.8, so we have to use a work around in Nuke. This is helpful for bringing Mov elements into a Aces comp.

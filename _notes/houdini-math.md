@@ -1,7 +1,7 @@
 ---
 title: math.h
-layout: note
-categories: houdini
+category: houdini
+date: 21-11-10
 ---
 
 ## Snippets from math.h

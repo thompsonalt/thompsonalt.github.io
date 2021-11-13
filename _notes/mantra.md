@@ -1,7 +1,7 @@
 ---
 title: Mantra Notes
-layout: note
-categories: houdini
+category: houdini
+date: 21-11-12
 ---
 
 ## Rendering Lines

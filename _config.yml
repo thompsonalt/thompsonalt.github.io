@@ -3,6 +3,22 @@ title: adamt.tv
 author: Adam Thompson
 description: VFX Artist / Tool Developer
 
+collections:
+    notes:
+        output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "note"
+
 # Build settings
 markdown: kramdown
 

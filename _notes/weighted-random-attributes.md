@@ -1,8 +1,7 @@
 ---
 title: Weighted Random Attributes
-layout: note
 date: 18-10-23
-categories: houdini
+category: houdini
 ---
 
 I wanted a way to scatter random objects to points in Houdini. This is simple enough if you want to have them randomly distributed, but what if you want more of some objects than others?

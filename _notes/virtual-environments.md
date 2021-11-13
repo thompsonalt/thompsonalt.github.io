@@ -1,8 +1,7 @@
 ---
 title: Virtual Environments
-layout: note
 date: 19-08-20
-categories: python
+category: python
 ---
 
 A virtual environment is an set of modules and dependencies isolated from the system as a whole. In this way you can set up different virtual environments for different tasks. Say one python project requires python 3.4 while another requires 2.7. You could configure an environment for each of them and run each project in its respective environment. 

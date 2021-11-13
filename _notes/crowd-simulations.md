@@ -1,8 +1,7 @@
 ---
 title: Crowd Simulations
-layout: note
 date: 19-01-03
-categories: houdini
+category: houdini
 ---
 
 ### Important note on importing animations from Mixamo

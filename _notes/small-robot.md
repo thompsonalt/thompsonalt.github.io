@@ -1,7 +1,7 @@
 ---
 title: Small Robot Notes
-layout: note
-categories: electronics
+category: electronics
+date: 21-11-07
 ---
 
 ## Motors

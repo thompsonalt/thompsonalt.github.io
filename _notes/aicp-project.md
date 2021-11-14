@@ -5,12 +5,12 @@ date: 18-10-17
 ---
 
 Finds the closest position to the surface of the geometry:
-```javascript
+```c
 @P = minpos(1, @P);
 ```
 
 ### [Quaternion to Euler](https://forums.odforce.net/topic/3440-quaternion-to-euler/)
-```javascript
+```c
 vector  qToE(vector4 q_value){
     float   q_0 = q_value.w ; 
     float   q_1 = q_value.x ; 
@@ -25,12 +25,12 @@ vector  qToE(vector4 q_value){
 ```
 
 ### Houdini's orient from vel equation
-```javascript
+```c
 @orient = quaternion(dihedral({0,0,1},@v));
 ```
 
 ### [Custom Slerp Formula](https://keithmaggio.wordpress.com/2011/02/15/math-magician-lerp-slerp-and-nlerp/)
-```javascript
+```c
 vector custom_slerp(vector start; vector end; float percent) {
      // Dot product - the cosine of the angle between 2 vectors.
      float dot = dot(start, end);     
@@ -55,7 +55,7 @@ vector vec2 = {0,0,1};
 ```
 ### Working @w Based POP Wrangle (needs refining)
 I finally have something working. There's still some wiggly values going on, but I think it will just take some refining.
-```javascript
+```c
 vector4 first_orient = @orient;
 vector4 second_orient = {0,0,0,1};
 
@@ -75,7 +75,7 @@ vector angle_axis = qconvert(transition);
 ```
 
 ### Easily Rotate a Vector Around an Axis
-```javascript
+```c
 matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 @N = @N*rot;
 ```
@@ -86,7 +86,7 @@ matrix3 rot = qconvert(quaternion(chf("angle"), {0,1,0}));
 >Try taking the dot product of your two quaternions (i.e., the 4-D dot product), and if the dot product is negative, replace your quaterions q1 and q2 with -q1 and q2 before performing Slerp.
 
 ### [Great guide on using xyzdist and primuv together](http://www.toadstorm.com/blog/?p=465)
-```javascript
+```c
 int posprim;
 vector param_uv;
 float maxdist = 10;

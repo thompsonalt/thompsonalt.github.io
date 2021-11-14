@@ -5,7 +5,7 @@ category: houdini
 ---
 
 ## [Declaring attributes](http://www.sidefx.com/docs/houdini/vex/snippets.html#declare)
-```javascript
+```c
 f@name //float
 u@name //vector2 (2 floats)
 v@name //vector3 (3 floats)
@@ -18,26 +18,26 @@ s@name //string
 ```
 
 This is another way to define them. A drawback to this method is there can be no evaluation on the right side of the equation.
-```javascript
+```c
 float @mass = 1;
 vector @up = {0, 1, 0};
 ```
 
 The typical way to grab an attribute from the second input of a wrangle would be to use the `point` function. Another way is to use `@opinput1_` followed by the attribute name.
-```javascript
+```c
 v@cord_offset = point(1, "P", 0); 
 v@cord_offset = @opinput1_P;
 ```
 
 ### Arrays
-```javascript
+```c
 int nbors[] = neighbours(0, @ptnum);
 i[]@connected_pts = neighbours(0, @ptnum);
 ```
 
 ### [Set Attribute as a Vector that Houdini Should Transform](https://www.sidefx.com/forum/topic/41722/?page=1#post-187303)
 By default, when you declare a vector attribute in Houdini it doesn't know if it should transform it with the rest of the geo or not. Some attributes, like `@orient`, `@v`, and `@N`, Houdini automatically knows to transform. If you create your own attribute, you'll have to set the type info explicitly. I'm curious if that attribute type info is visible somewhere.
-```javascript
+```c
 v@attribute1 = 1;
 setattribtypeinfo(0, “point”, “attribute1”, “vector”);
 addvariablename(0, “attribute1”, “ATTRIBUTE1”);
@@ -46,7 +46,7 @@ addvariablename(0, “attribute1”, “ATTRIBUTE1”);
 ### Create Groups from Attributes
 This is of limited usefulness. `detailintrinsic` is a handy way to get a list of all the primitive attributes. See more on that [here](https://www.sidefx.com/forum/topic/31699/).
 
-```javascript
+```c
 string primattribs[] = detailintrinsic(0,"primitiveattributes");
 
 for (int i = 0; i < len(primattribs); i++) {
@@ -55,11 +55,11 @@ for (int i = 0; i < len(primattribs); i++) {
 ```
 
 ### Easy positive or negative integer
-```javascript
+```c
 i@rand_mag =  rand(@ptnum)< 0.5 ? -1 : 1;
 ```
 Or even easier:
-```javascript
+```c
 sign(rand(@ptnum)-0.5);
 ```
 
@@ -68,7 +68,7 @@ From this help page on [`packedtransform()`](https://www.sidefx.com/docs/houdini
 [Hip download.](/assets/projects/houdini/19-10-07-alembic-transform.zip)
 
 Negate and store transform:
-```javascript
+```c
 // get transform from alembic
 matrix full_transform = primintrinsic(0, "packedfulltransform", 0);
 4@disabled_transform = full_transform;
@@ -88,7 +88,7 @@ setpointattrib(0, "P", @ptnum, pos * transform);
 ```
 
 Apply transform to arbitrary geo:
-```javascript
+```c
 matrix transform = prim(1, "disabled_transform", 0);
 
 // get current packed transform
@@ -105,7 +105,7 @@ for (int i = 0; i < len(primpoints); i ++){
 
 ## Find Weighted Average of Near Points Attribute
 
-```
+```c
 // Compute color of voxel based on distance weighted
 // average Cd of particles within radius of .05
 
@@ -140,7 +140,7 @@ v@Cd = value;
 
 This stumped me for a while. In order to crack the transform and feed those transform values back into a maketransform, you need to use `XFORM_SRT` instead of `XFORM_TRS` for the order of the transform.
 
-```
+```c
 matrix3 xform = primintrinsic(0, "transform", @primnum);
 
 vector translate, rotate, scale;

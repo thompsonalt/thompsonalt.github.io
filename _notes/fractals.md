@@ -10,7 +10,7 @@ As a personal challenge I set out to implement the menger sponge in Houdini. To 
 
 From a node perspective the volume implementation is pretty simple. A single volume wrangle controls the fractal and a vdb convert node converts it into an SDF. I would have liked to implement this as a recursive function, but I found that vex actually doens't support that. In any case this looping method is probably safer.
 
-```javascript
+```c
 int menger(vector origin; vector pos; int total_iterations; vector size){
     for(int iteration = 1; iteration <= total_iterations; iteration++){
         // Calculate the width of the current box

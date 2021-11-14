@@ -5,7 +5,7 @@ category: houdini
 ---
 This is the code to produce the velocity field for the smoke. Making the smoke travel a long distance without pluming is crux of the challenge. Having a large velocity field solves this problem to some extent.
 
-```javascript
+```c
 float dist = length(set(@P.x, @P.y, 0));
 float norm_dist = fit(dist, 0.0, chf("max_dist"), 0.0, 1.0);
 float remap_dist = chramp("remap_dist", norm_dist);

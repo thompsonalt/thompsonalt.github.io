@@ -13,7 +13,7 @@ To solve this takes a two step process. First assign weights to each of the obje
 This asset is also a good demonstration of using the Multiparm Block folder.
 
 ### Set Weights
-```javascript
+```c
 f[]@choice_weights;
 
 for(int i=1; i<=11; i++){
@@ -21,7 +21,7 @@ for(int i=1; i<=11; i++){
 }
 ```
 ### Create Weighted Attribute
-```javascript
+```c
 float choice_weights[] = detail(0, "choice_weights");
 //printf("choice weights: %E", choice_weights);
 

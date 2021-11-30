@@ -15,6 +15,8 @@ i@name //int
 3@name //matrix 3 (3x3 floats)
 4@name //matrix (4x4 floats)
 s@name //string
+s[]@name //array of strings
+f[]@name //array of floats
 ```
 
 This is another way to define them. A drawback to this method is there can be no evaluation on the right side of the equation.

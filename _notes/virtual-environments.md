@@ -66,3 +66,8 @@ To force upgrade a package use ```--upgrade```
 ```
 pip install Django --upgrade
 ```
+
+To generate a `requirements.txt` file
+```
+pip freeze > requirements.txt
+```

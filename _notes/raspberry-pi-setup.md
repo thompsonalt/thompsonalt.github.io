@@ -30,7 +30,7 @@ date: 21-11-10
 
     - hostname :    raspberrypi
     - user:         pi
-    - pass:         raspberrypi
+    - pass:         raspberry
 
 5. Run `raspi-config` to change hostname and password. Also consider expanding the file system under 'Advanced'.
 

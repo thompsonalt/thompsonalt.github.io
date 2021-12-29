@@ -18,3 +18,12 @@ Also, the modern `uvcoords` node uses *u* and *v* instead of *s* and *t* like th
 ## Render State VOP
 
 Sometimes you need to access render time attributes within a shader. The main usecase for this is accessing *primitive* attributes on packed primitives. Lay down a renderstate node, and add `packed:your_attribute` to the value name. The dropdown has a bunch of useful options as well.
+
+## Cryptomatte Pieces
+
+Lewis Saunders has a great [overview](https://lewisinthelandofmachines.tumblr.com/post/176559578118/houdini-per-piece-cryptomatte-mantra-support-for) of how to apply cryptomatte to pieces inside a geo node in Mantra.
+
+In short: 
+- Add `vm_gifile` render property to your material
+- Where you assign your material add a local override. Enable `Overrides use local variables` and select `vm_gifile` from the `Choose Parameter` dropdown. Put `$NAME` or another unique primitive attribute as the string.
+- Add a Cryptomatte layer to the Mantra ROP and set the property to `gifile`

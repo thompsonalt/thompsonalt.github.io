@@ -155,6 +155,12 @@ matrix3 new_xform = (matrix3)maketransform(XFORM_SRT, XFORM_XYZ, translate, rota
 3@new_xform = new_xform;
 ```
 
+## Integer to padded string
+
+```c
+sprintf('%04d',@Frame)
+```
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

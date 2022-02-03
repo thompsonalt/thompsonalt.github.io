@@ -15,6 +15,7 @@ i@name //int
 3@name //matrix 3 (3x3 floats)
 4@name //matrix (4x4 floats)
 s@name //string
+d@name //dict
 s[]@name //array of strings
 f[]@name //array of floats
 ```
@@ -30,6 +31,50 @@ The typical way to grab an attribute from the second input of a wrangle would be
 v@cord_offset = point(1, "P", 0); 
 v@cord_offset = @opinput1_P;
 ```
+
+### [Reference Parameters in Vex](https://mrkunz.com/blog/08_22_2018_VEX_Wrangle_Cheat_Sheet.html)
+
+```c
+ch('flt1');             // Float
+chf('flt2');            // Float
+chi('int');             // Integer
+chv('vecparm');         // Vector 3
+chp('quat');            // Vector 4 / Quaternion
+ch3('m3');              // 3x3 Matrix
+ch4('m4');              // 4x4 Matrix
+chs('str');             // String
+chramp('r', x);         // Spline Ramp
+vector(chramp('c', x)); // RGB Ramp 
+```
+
+### Global Variables
+
+```c
+@Time //Float time ($T)
+
+@Frame //Float frame ($FF)
+
+@SimTime //Float simulation time ($ST), only present in DOP contexts.
+
+@SimFrame //Float simulation frame ($SF), only present in DOP contexts.
+
+@TimeInc //Float time step (1/$FPS)
+```
+
+
+### [Attribute Wrangle Variables](https://mrkunz.com/blog/08_22_2018_VEX_Wrangle_Cheat_Sheet.html)
+```c
+v@P         //The position of the current element.
+i@ptnum     //The point number attached to the currently processed element.
+i@vtxnum    //The linear number of the currently processed vertex.
+i@primnum   //The primitive number attached to the currently processed element.
+i@elemnum   //The index number of the currently processed element.
+i@numpt     //The total number of points in the geometry.
+i@numvtx    //The number of vertices in the primitive of the currently processed element.
+i@numprim   //The total number of primitives in the geometry.
+i@numelem   //The total number of elements being processed.
+```
+
 
 ### Arrays
 ```c
@@ -160,6 +205,10 @@ matrix3 new_xform = (matrix3)maketransform(XFORM_SRT, XFORM_XYZ, translate, rota
 ```c
 sprintf('%04d',@Frame)
 ```
+
+## Simulation Attributes
+
+John Kunz has a great [list](https://mrkunz.com/blog/08_22_2018_VEX_Wrangle_Cheat_Sheet.html) of attributes used in simulations
 
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)

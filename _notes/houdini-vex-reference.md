@@ -26,7 +26,7 @@ float @mass = 1;
 vector @up = {0, 1, 0};
 ```
 
-The typical way to grab an attribute from the second input of a wrangle would be to use the `point` function. Another way is to use `@opinput1_` followed by the attribute name.
+The typical way to grab an attribute from the second input of a wrangle would be to use the `point` function. Another way is to use `@opinput1_` followed by the attribute name. This will grab the element with the same index as the first input. There is also a “attribute to match” parameter that will let you use arbitrary attributes such as `id`.
 ```c
 v@cord_offset = point(1, "P", 0); 
 v@cord_offset = @opinput1_P;

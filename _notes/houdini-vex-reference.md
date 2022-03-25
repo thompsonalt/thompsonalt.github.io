@@ -38,6 +38,7 @@ v@cord_offset = @opinput1_P;
 ch('flt1');             // Float
 chf('flt2');            // Float
 chi('int');             // Integer
+chu('vector2')          // Vector 2
 chv('vecparm');         // Vector 3
 chp('quat');            // Vector 4 / Quaternion
 ch3('m3');              // 3x3 Matrix

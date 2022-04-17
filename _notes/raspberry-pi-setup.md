@@ -4,9 +4,13 @@ category: electronics
 date: 21-11-10
 ---
 
-1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/), and follow the simple steps to install the OS.
+1. Install [Raspberry Pi Imager](https://www.raspberrypi.com/software/), and follow the simple steps to install the OS. You can skip the next two steps if you use the gear icon in the bottom right corner (or `Ctrl + Shift + X`) to configure the Pi. In fact, if you're installing the "Lite" version, you **must** configure it this way.
 
-2. Add `wpa_supplicant.conf` to the root of the SD card to automatically connect to wifi.
+### [Raspberry Pi Imager](https://www.raspberrypi.com/documentation/computers/getting-started.html#using-raspberry-pi-imager)
+
+>If you are installing Raspberry Pi OS Lite and intend to run it headless, you will still need to create a new user account. Since you will not be able to create the user account on first boot, you MUST configure the operating system using the Advanced Menu.
+
+2. Add `wpa_supplicant.conf` to the root of the SD card to automatically connect to wifi. For the Zero 2W, this must be **2.4 gigahertz**.
 
     ```
     country=US
@@ -43,5 +47,5 @@ date: 21-11-10
 
 ## Troubleshooting
 
-* Restart the router
+* **Restart the router**
 * Connect via USB to computer

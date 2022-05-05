@@ -211,6 +211,36 @@ sprintf('%04d',@Frame)
 
 John Kunz has a great [list](https://mrkunz.com/blog/08_22_2018_VEX_Wrangle_Cheat_Sheet.html) of attributes used in simulations
 
+
+## Attribute fade along curve
+```c
+float falloff = chf("falloff");
+float offset = chf("offset");
+
+float min = offset * (falloff + 1) - falloff;
+float max = min + falloff;
+
+f@value = fit(f@curveu, min, max, 0, 1);
+v@Cd = f@value;
+```
+
+## Get number from node name
+This isn't vex, but I always forget it.
+```c
+opdigits('.')
+```
+
+
+## Unique Values
+
+Useful function for finding all the unique values a string or integer attribute has.
+
+```c
+int [] uniquevals(<geometry>geometry, string attribclass, string attribute_name)
+
+string [] uniquevals(<geometry>geometry, string attribclass, string attribute_name)
+
+```
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

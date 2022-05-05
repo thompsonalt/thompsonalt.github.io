@@ -31,3 +31,11 @@ f@width_of_frame = width_of_frame;
 f@pixel_width = width_of_frame/horizontal_res;
 f@pixels = @pscale/f@pixel_width;
 ```
+
+### Camera Culling
+A clever way to do camera culling is to use a 'UV Texture' node set to 'Perspective from camera'. Then you can cull points that are outside the zero to one uv space.
+```c
+float overscan = chf("overscan");
+if (v@camera_uv.x < 0-overscan || v@camera_uv.x > 1+overscan) removepoint(0, @ptnum, 1);
+if (v@camera_uv.y < 0-overscan || v@camera_uv.y > 1+overscan) removepoint(0, @ptnum, 1);
+```

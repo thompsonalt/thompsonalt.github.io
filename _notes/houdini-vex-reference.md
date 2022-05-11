@@ -241,6 +241,13 @@ int [] uniquevals(<geometry>geometry, string attribclass, string attribute_name)
 string [] uniquevals(<geometry>geometry, string attribclass, string attribute_name)
 
 ```
+
+
+## Ternary Conditional
+```c
+f@density = (f@density>0.01) ? 1.0 : 0.0; 
+```
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

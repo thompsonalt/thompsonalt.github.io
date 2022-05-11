@@ -37,3 +37,10 @@ target_folder.addParmTemplate(hou_parm_template2)
 target_folder.addParmTemplate(hou_parm_template3)
 n.setParmTemplateGroup(parm_group)
 ```
+
+### Add Vexpression To HDA
+
+```c
+{
+`ifs(ch('../use_vex', chs('./preproc_vex')))
+}

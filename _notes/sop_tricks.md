@@ -16,7 +16,7 @@ Useful nodes for curves
 - `fit`
 - `cardinal_ql`
 
-
 ### Spirals
 - `sweep` will let you roll around a curve
-- `s
+- `labs::spiral` 
+- `qLib::spiral_ql`

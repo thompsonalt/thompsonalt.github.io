@@ -248,6 +248,12 @@ string [] uniquevals(<geometry>geometry, string attribclass, string attribute_na
 f@density = (f@density>0.01) ? 1.0 : 0.0; 
 ```
 
+## Sample weighted 
+
+[`sample_discrete()`](https://www.sidefx.com/docs/houdini/vex/functions/sample_discrete.html)
+
+
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

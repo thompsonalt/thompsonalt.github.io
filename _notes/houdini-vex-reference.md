@@ -252,7 +252,46 @@ f@density = (f@density>0.01) ? 1.0 : 0.0;
 
 [`sample_discrete()`](https://www.sidefx.com/docs/houdini/vex/functions/sample_discrete.html)
 
+## Modulo Reference
+To get a value from 0-1 that loops every 12 frames:
+```c
+f@cool = (f@Frame / 12) % 1
+```
 
+## Normalize attribute sweep between 0 and 1
+
+I find it annoying to have to animate a parameter beyond 1 or below 0, so this lets you have a nice normalized parameter to animate.
+
+```
+    0                  1
+    |__________________|
+[   ]  ->  [    ]  ->  [    ]
+
+```
+
+Where `@mask` goes from 0-1:
+```c
+float radius = chf("radius");
+float offset = chf("offset);
+
+offset = fit(offset, 0, 1, 0, offset + radius);
+f@mask = fit(f@mask, offset - radius, offset, 0, 1);
+```
+
+## Animate point attribute sequentially
+
+When you want only one point or a few points to animate at a time.
+
+<!-- TODO: I think there's an off by 1 error here -->
+```c
+float overlap = chf("overlap");
+float anim = chf("anim");
+
+float range = (1-overlap) * (npoints(0) + 1)
+float pt_range_start = ((1-overlap) * (npoints(0) - 1 - @ptnum));
+f@amount = fit(anim, pt_range_start / range, (pt_range_start + 1) / range, 0, 1);
+
+```
 
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)

@@ -1,5 +1,5 @@
 ---
-title: SOP Tricks
+title: Node Reference
 date: 22/05/10
 category: houdini
 ---

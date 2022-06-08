@@ -1,0 +1,8 @@
+{
+    "pasteImage.basePath": "${projectRoot}/assets/images",
+    "pasteImage.defaultName": "YY-MM-DD",
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.nameSuffix": "description",
+    "pasteImage.path": "${projectRoot}/assets/images",
+    "pasteImage.filePathConfirmInputBoxMode": "onlyName"
+}

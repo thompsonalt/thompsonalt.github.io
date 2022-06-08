@@ -52,13 +52,9 @@ vector(chramp('c', x)); // RGB Ramp
 
 ```c
 @Time //Float time ($T)
-
 @Frame //Float frame ($FF)
-
 @SimTime //Float simulation time ($ST), only present in DOP contexts.
-
 @SimFrame //Float simulation frame ($SF), only present in DOP contexts.
-
 @TimeInc //Float time step (1/$FPS)
 ```
 
@@ -67,12 +63,12 @@ vector(chramp('c', x)); // RGB Ramp
 ```c
 v@P         //The position of the current element.
 i@ptnum     //The point number attached to the currently processed element.
-i@vtxnum    //The linear number of the currently processed vertex.
-i@primnum   //The primitive number attached to the currently processed element.
-i@elemnum   //The index number of the currently processed element.
 i@numpt     //The total number of points in the geometry.
-i@numvtx    //The number of vertices in the primitive of the currently processed element.
+i@vtxnum    //The linear number of the currently processed vertex.
+i@numvtx    //Vertices in the primitive of the currently processed element.
+i@primnum   //The primitive number attached to the currently processed element.
 i@numprim   //The total number of primitives in the geometry.
+i@elemnum   //The index number of the currently processed element.
 i@numelem   //The total number of elements being processed.
 ```
 

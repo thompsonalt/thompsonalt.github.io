@@ -23,3 +23,8 @@ Useful nodes for curves
 
 ### Groups
 - `groupfromattributeboundary` Makes edge groups from transitions between attributes
+
+
+### COPs
+
+To disable premultiplication in a COP file node, there is a drop down next to the file name.

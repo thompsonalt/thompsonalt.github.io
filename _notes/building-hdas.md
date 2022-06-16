@@ -44,3 +44,18 @@ n.setParmTemplateGroup(parm_group)
 {
 `ifs(ch('../use_vex', chs('./preproc_vex')))
 }
+```
+
+### Reference embedded 'extra files
+
+You can embed files into an HDA through type properties > Extra Files. 
+
+For [referencing those files](https://www.sidefx.com/docs/houdini/assets/opdef.html) from within the HDA, use the following syntax:
+
+```
+opdef:..?default_texture.jpg
+```
+
+**Note:** The `..` is a relative path to the HDA root. If this parameter is on the HDA itself and not inside it, it would just be `opdef:.?default_texture.jpg`
+
+This syntax is often used for [HDA Icons](https://www.sidefx.com/docs/houdini/ref/windows/optype#basic)

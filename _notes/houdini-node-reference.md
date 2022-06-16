@@ -30,3 +30,7 @@ Useful nodes for curves
 ## COPs
 
 To disable premultiplication in a COP file node, there is a drop down next to the file name.
+
+## Kinefx
+
+[Matt's video on IK Chains](https://youtu.be/ZEFYdbhsVi0)

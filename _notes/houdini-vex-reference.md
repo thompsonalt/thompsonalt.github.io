@@ -289,6 +289,26 @@ f@amount = fit(anim, pt_range_start / range, (pt_range_start + 1) / range, 0, 1)
 
 ```
 
+## PID POP Controller
+```c
+vector pid = chv("pid");
+
+v@goal = point(1, "P", idtopoint(1, @ptnum%npoints(1)));
+
+v@error = v@goal - v@P;
+
+v@prev_error = (v@goal - v@pprevious) * @has_pprevious;
+v@derivative = (v@error - v@prev_error)/@TimeInc;
+v@integral = v@prev_integral + v@error * @TimeInc;
+
+v@force = pid[0] * v@error + pid[1] * v@integral + pid[2] * v@derivative;
+
+v@prev_integral = v@integral;
+```
+Links:
+ - [PID without a PHD](http://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf)
+ - [PID control](https://www.robotsforroboticists.com/pid-control/)
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

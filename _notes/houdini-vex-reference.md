@@ -268,10 +268,20 @@ I find it annoying to have to animate a parameter beyond 1 or below 0, so this l
 Where `@mask` goes from 0-1:
 ```c
 float radius = chf("radius");
-float offset = chf("offset);
+float offset = chf("offset");
 
 offset = fit(offset, 0, 1, 0, offset + radius);
 f@mask = fit(f@mask, offset - radius, offset, 0, 1);
+```
+And a version with noise:
+```c
+float radius = chf("radius");
+float offset = chf("offset");
+
+float norm_y = relbbox(0, @P).y;
+float noise = (noise(@P*chf("noise_scale")*chv("noise_scale_vector"))-.5)*1;
+offset = fit(offset, 0, 1, 0, offset + radius);
+float mask = fit(fit(norm_y + noise, 0, 1.75, 0, 1), offset - radius, offset, 0, 1);
 ```
 
 ## Animate point attribute sequentially

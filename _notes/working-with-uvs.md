@@ -1,13 +1,17 @@
 ---
-title: Working With UVs
+title: UV Workflows
 date: 19-01-23
 category: houdini
 ---
 
 ### Preserving UVs After Remeshing
-This has been bothering me for a while. Fixing the pesky seams that come up when using vertex UVs can be a pain. A great tool to fix this is the `vertex split` node. This creates new points at vertex where an attribute differs by more than a specified amount. If you choose the uv attribute, it'll create new points at the uv seams and promote it to a point attribute. When you remesh at this point the UV seams won't be aparent and you can promote the UVs to a vertex attribute and fuse the points to get it back to vertex uvs.
+There are a couple ways to acomplish this. One is to use the `splitpoints` node to break each point along a uv seam into two points. Then you can feed that into a remesh and fuse after the fact. A more direct method is to group the uv edges with `groupfromattributeboundary` and use that new edge group as the hard edge group in the remesh node. In either case, I usually disable recomputing normals. 
+
+### Preserving UVs After VDB Conversion
+The [Labs](https://www.sidefx.com/products/sidefx-labs/) toolkit has a great node for this called `uv_transfer`. You can transfer most of the attributes by plugging the original geometry into the second input of `convertvdb`, and then fix the UVs with `uv_transfer`. By default this node is very slow though. If you open up the node and compile the inner loop, it gets much faster.
 
 [Side Effects Forum Post](https://www.sidefx.com/forum/topic/18890/)
-### [Hip Download](/assets/projects/houdini/19-01-23-remesh-preserve-uvs.hip)
+[Another relevant post](https://www.sidefx.com/forum/topic/61928/?page=1#post-331565)
+### [Hip Download](/assets/projects/houdini/19-01-23-remesh-preserve-uvs-v002.hiplc)
 
 ![Preserve UVs](/assets/images/19-01-23-preserve-uvs.gif)

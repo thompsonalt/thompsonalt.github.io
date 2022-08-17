@@ -87,6 +87,8 @@ setattribtypeinfo(0, “point”, “attribute1”, “vector”);
 addvariablename(0, “attribute1”, “ATTRIBUTE1”);
 ```
 
+You can also specify the type with the `attributeadjustvector` node.
+
 ### Create Groups from Attributes
 This is of limited usefulness. `detailintrinsic` is a handy way to get a list of all the primitive attributes. See more on that [here](https://www.sidefx.com/forum/topic/31699/).
 
@@ -322,3 +324,4 @@ Links:
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 
+[Lots of great vex tricks](https://github.com/jtomori/vex_tutorial)

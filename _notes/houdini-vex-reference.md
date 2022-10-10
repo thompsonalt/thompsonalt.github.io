@@ -321,6 +321,13 @@ Links:
  - [PID without a PHD](http://www.wescottdesign.com/articles/pid/pidWithoutAPhd.pdf)
  - [PID control](https://www.robotsforroboticists.com/pid-control/)
 
+
+## Find primitives in a bounding box
+
+```c
+int [] primfind(<geometry>geometry, vector min, vector max)
+```
+
 ## Links
 [VFXbrain has some great vex snippets](https://vfxbrain.wordpress.com/2016/10/02/vex-snippets/)
 

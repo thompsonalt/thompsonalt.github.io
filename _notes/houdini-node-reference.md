@@ -26,6 +26,13 @@ Useful nodes for curves
 ### Groups
 - `groupfromattributeboundary` Makes edge groups from transitions between attributes
 
+### Attribute Create
+
+Attributecreate offers a clean way to construct strings from existing attributes. Unlike parameters on wrangles, you can access local varaibles and attributes. Adding your own attributes works as well.
+
+![attribute create screenshot](/assets/images/23-03-02-attribcreate-string-screenshot.png)
+
+
 ### VDBs
 #### Infuse density vdb with velocity vectors.
 I often find myself with a density volume or VDB that I'd like to add velocity to. If it's coming from geometry, you could use the `vdbfrompolygons` node to read the velocity surface attribute. Otherwise, there are a couple approaches.

@@ -3,6 +3,9 @@ title: adamt.tv
 author: Adam Thompson
 description: VFX Artist / Tool Developer
 
+url: "https://www.adamt.tv"
+baseurl: ""
+
 collections:
     notes:
         output: true

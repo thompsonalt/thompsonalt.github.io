@@ -1,9 +1,9 @@
 repository: thompsonalt/thompsonalt.github.io
-title: adamt.tv
+title: thompsonalt
 author: Adam Thompson
 description: VFX Artist / Tool Developer
 
-url: "https://www.adamt.tv"
+url: "https://www.thompsonalt.com"
 baseurl: ""
 
 collections:
